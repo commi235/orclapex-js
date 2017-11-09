@@ -609,15 +609,15 @@ declare namespace apex {
     function makeApplicationUrl(pArgs: any): string;
 
     interface htmlBuilderPrototype {
-      markup(t: string): string;
+      markup(t: string): htmlBuilderPrototype;
 
-      attr(name: string, value:string): string;
+      attr(name: string, value:string): htmlBuilderPrototype;
 
-      optionalAttr(name: string, value: string): string;
+      optionalAttr(name: string, value: string): htmlBuilderPrototype;
 
-      optionalBoolAttr(name: string, value: boolean): string;
+      optionalBoolAttr(name: string, value: boolean): htmlBuilderPrototype;
 
-      content(t: string): string;
+      content(t: string): htmlBuilderPrototype;
 
       clear(): void;
 
