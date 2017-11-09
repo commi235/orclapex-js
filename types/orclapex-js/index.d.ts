@@ -389,7 +389,7 @@ declare namespace apex {
     }
 
     interface PluginData {
-      pageItems: string | JQuery | HTMLElement | Array<string>,
+      pageItems?: string | JQuery | HTMLElement | Array<string>,
       x01?: string,
       x02?: string,
       x03?: string,
