@@ -7,7 +7,7 @@
 declare namespace apex {
   const gPageContext$: any;
 
-  const jQuery: JQuery;
+  const jQuery: JQueryStatic;
 
   /**
    * apex.confirm Signature 1 (alias for apex.page.confirm)
