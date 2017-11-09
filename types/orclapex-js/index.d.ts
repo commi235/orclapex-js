@@ -588,6 +588,43 @@ declare namespace apex {
      *                                     following pOptions properties table.
      */
     function applyTemplate(pTemplate: string, pOptions: TemplateOptions): string;
+
+    /**
+     * Creates a URL to an APEX application page from properties given in pArgs and information on the current page
+     * pArgs is an object containing any of the following optional properties
+     * - appId the application id (flow id). If undefined or falsey the value is taken from the current page
+     * - pageId the page id (flow step id). If undefined or falsey the value is taken from the current page
+     * - session the session (instance). If undefined or falsey the value is taken from the current page
+     * - request a request string used for button processing. If undefined or falsey the value is taken from the current page
+     * - debug YES, NO, LEVEL<n> sets the debug level. If undefined or falsey the value is taken from the current page
+     * - clearCache a comma separated list of pages RP, APP, SESSION. The default is empty string
+     * - itemNames an array of item names to set in session state
+     * - itemValues an array of values corresponding to each item name in the itemNames array.
+     * - todo consider a map alternative for items
+     * - printerFriendly Yes or empty string. Default is empty string.
+     *
+     * @param pArgs
+     * @returns {String}
+     */
+    function makeApplicationUrl(pArgs: any): string;
+
+    interface htmlBuilderPrototype {
+      markup(t: string): string;
+
+      attr(name: string, value:string): string;
+
+      optionalAttr(name: string, value: string): string;
+
+      optionalBoolAttr(name: string, value: boolean): string;
+
+      content(t: string): string;
+
+      clear(): void;
+
+      toString(): string;
+    }
+
+    function htmlBuilder(): htmlBuilderPrototype;
   }
 
   /**
