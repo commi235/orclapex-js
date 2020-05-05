@@ -1,7 +1,17 @@
 
 /// <reference types="jquery"/>
-/// <reference types="./page"/>
+/// <reference types="./actions" />
+/// <reference types="./da" />
+/// <reference types="./debug" />
+/// <reference types="./event" />
 /// <reference types="./item"/>
+/// <reference types="./lang"/>
+/// <reference types="./message"/>
+/// <reference types="./navigation"/>
+/// <reference types="./page"/>
+/// <reference types="./region" />
+/// <reference types="./server"/>
+/// <reference types="./widget"/>
 
 /**
  * The apex namespace is the top level Oracle Application Express namespace and contains a number of sub namespaces, and a few common functions and properties.
